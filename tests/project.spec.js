@@ -4,7 +4,7 @@ import {chromium, test, expect} from '@playwright/test';
 
 test('Browser launch Ashley furniture', async () => {
     const browser = await chromium.launch({
-        headless: false,
+        
     })
     const page = await browser.newPage();
     await page.goto('https://store.ashleyfurniture.in/');
@@ -23,5 +23,6 @@ test('Browser launch Ashley furniture', async () => {
 
     await loginBtn.click();
     // await page.waitForTimeout(20000);
+    //await page.screenshot();
     await page.close();
 });
